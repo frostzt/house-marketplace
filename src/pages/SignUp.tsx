@@ -10,6 +10,7 @@ import { setDoc, doc, serverTimestamp, FieldValue } from "firebase/firestore";
 import { ReactComponent as ArrowRight } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 import toast from "react-hot-toast";
+import OAuth from "../components/OAuth";
 
 const SignUp: React.FC = () => {
   const navigate = useNavigate();
@@ -112,6 +113,7 @@ const SignUp: React.FC = () => {
           </button>
         </div>
       </form>
+      <OAuth />
       <Link to="/sign-in" className="registerLink">
         Sign In Instead
       </Link>

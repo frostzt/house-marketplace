@@ -4,6 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { ReactComponent as ArrowRight } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 import toast from "react-hot-toast";
+import OAuth from "../components/OAuth";
 
 const SignIn: React.FC = () => {
   const navigate = useNavigate();
@@ -80,6 +81,7 @@ const SignIn: React.FC = () => {
           </button>
         </div>
       </form>
+      <OAuth />
       <Link to="/sign-up" className="registerLink">
         Sign Up Instead
       </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Explore from "./pages/Explore";
@@ -11,6 +12,7 @@ import SignUp from "./pages/SignUp";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <Toaster />
       <Routes>
         <Route path="/" element={<Explore />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
 import Category from "./pages/Category";
+import CreateListing from "./pages/CreateListing";
 import Explore from "./pages/Explore";
 import ForgotPassword from "./pages/ForgotPassword";
 import Offers from "./pages/Offers";
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         </Route>
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/create-listing" element={<CreateListing />} />
       </Routes>
       <Navbar />
     </BrowserRouter>

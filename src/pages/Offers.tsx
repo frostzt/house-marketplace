@@ -16,7 +16,7 @@ import Spinner from "../components/Spinner";
 import ListingItem from "../components/ListingItem";
 import { IListing } from "./Category";
 
-function Offers() {
+const Offers = () => {
   const [listings, setListings] = useState<IListing[]>([]);
   const [loading, setLoading] = useState(true);
   const [lastFetchedListing, setLastFetchedListing] =
@@ -133,6 +133,6 @@ function Offers() {
       )}
     </div>
   );
-}
+};
 
 export default Offers;

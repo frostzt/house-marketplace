@@ -6,7 +6,6 @@ import {
   collection,
   deleteDoc,
   doc,
-  DocumentData,
   getDocs,
   orderBy,
   query,

@@ -40,6 +40,24 @@ const SignIn: React.FC = () => {
     }
   };
 
+  const signInAsTest = async () => {
+    try {
+      const auth = getAuth();
+
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        "test@test.com",
+        "Test@1234"
+      );
+
+      if (userCredential.user) {
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error("Something failed!");
+    }
+  };
+
   return (
     <div className="pageContainer">
       <header>
@@ -79,6 +97,12 @@ const SignIn: React.FC = () => {
           <button className="signInButton">
             <ArrowRight fill="#fff" width="34px" height="34px" />
           </button>
+        </div>
+        <div className="signInBar">
+          <p className="signInText">Sign in as test account</p>
+          <div className="signInButton" onClick={signInAsTest}>
+            <ArrowRight fill="#fff" width="34px" height="34px" />
+          </div>
         </div>
       </form>
       <OAuth />
